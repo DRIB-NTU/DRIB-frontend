@@ -3,10 +3,13 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Divider from '@mui/material/Divider';
+import Toolbar from '@mui/material/Toolbar';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Container>
+      <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
         Your Website
@@ -14,6 +17,7 @@ function Copyright() {
       {new Date().getFullYear()}
       {'.'}
     </Typography>
+    </Container>
   );
 }
 
@@ -26,21 +30,28 @@ export default function Footer(props: FooterProps) {
   const { description, title } = props;
 
   return (
-    <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
-      <Container maxWidth="lg">
-        <Typography variant="h6" align="center" gutterBottom>
-          {title}
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          {description}
-        </Typography>
-        <Copyright />
-      </Container>
-    </Box>
+    <Container component="footer" >
+      {/* <Link href="#" color="inherit">
+        關於我們
+      </Link>
+      <Link href="#" color="inherit">
+        幫助中心
+      </Link>
+      <Link href="#" color="inherit">
+        隱私
+      </Link>
+      <Link href="#" color="inherit">
+        條款
+      </Link> */}
+      <Divider/>
+      <Typography variant="body2" color="text.secondary" align="center" sx={{mt:4}}>
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        DRIB
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+    </Container>
   );
 }
