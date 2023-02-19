@@ -1,9 +1,11 @@
 const contact = "0800-000-000"
 
 const jobs = [
-    {
+    {   
+        "jobid": "1",
         "title": "業務部實習生",
         "company": "BBDO Taiwan_香港商黃禾國際廣告有限公司台灣分公司",
+        "companyphoto": "https://sixland.mx/wp-content/uploads/2022/12/22.png",
         "location": "台北市信義區松仁路97號16樓",
         "salary": "論件計酬3,000~8,000元",
         "link": "https://www.104.com.tw/job/7ftzg?jobsource=jolist_c_relevance",
@@ -21,8 +23,10 @@ const jobs = [
         我們提供還不錯的休假制度(不扣薪病假、生日假、流感假、新人10天年假、三不五時亂放假、老闆高興突然說放假)"
     },
     {
+        "jobid": "2",
         "title": "市場研究 (實習生/Part-time)",
         "company": "FaceHeart Corp. 鉅怡智慧股份有限公司",
+        "companyphoto": "https://media.cakeresume.com/image/upload/s--LW-H-WTt--/c_pad,fl_png8,h_400,w_400/v1663844563/o83p6lv7a1zvucejnxgh.png",
         "location": "Taipei City",
         "salary": "300 TWD / hour",
         "link": "https://www.cakeresume.com/companies/faceheart/jobs/market-research-intern-part-time",
@@ -45,8 +49,10 @@ const jobs = [
         "benefits": ""
     },
     {
+        "jobid": "3",
         "title": "【實習工讀】聯播網發展實習 - 長期實習 (表現優異者，將有機會轉正）",
         "company": "艾得基客行銷顧問股份有限公司",
+        "companyphoto": "https://media.licdn.com/dms/image/C510BAQGMhfYRHafsKQ/company-logo_200_200/0/1581390533939?e=2147483647&v=beta&t=EBQgWpf-WZBkmofJLw3mSgeD_dytiKnHD-TQE1PKH7I",
         "location": "台北市大安區敦化南路二段76號16樓",
         "salary": "時薪176元",
         "link": "https://www.104.com.tw/job/6ygq0?jobsource=jolist_c_relevance",
