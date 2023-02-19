@@ -1,21 +1,24 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Routes, Route, useParams } from 'react-router-dom';
+import JobCard from '../components/searchpage/JobCard'
+import Container from '@mui/material/Container';
+import {jobs} from '../params'
 import { Typography } from '@mui/material';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import StyleIcon from '@mui/icons-material/Style';
 import { Box } from '@mui/system';
-import { jobs } from '../params'
 import PaidIcon from '@mui/icons-material/Paid';
 import Divider from '@mui/material/Divider';
 const theme = createTheme();
 
+
 export default function JobPage() {
   let  jobid  = 1
   console.log(jobid)
+  console.log(jobs)
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xl" sx={{flexDirection: 'row', flexWrap: 'wrap'}}>
