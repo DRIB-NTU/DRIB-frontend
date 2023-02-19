@@ -9,7 +9,8 @@ import SendIcon from '@mui/icons-material/Send';
 import StyleIcon from '@mui/icons-material/Style';
 import PaidIcon from '@mui/icons-material/Paid';
 import Divider from '@mui/material/Divider';
-
+import Stack from '@mui/material/Stack';
+import Chip from '@mui/material/Chip';
 interface JobDataProps {
   job_data: string;
 }
@@ -33,8 +34,8 @@ export default function JobCard(props: JobDataProps) {
           overflow: 'auto'
         }}>
           <Container component="main" maxWidth="xl" sx={{flexDirection: 'row', flexWrap: 'wrap'}}>
-            <Container maxWidth={false} sx={{position: "sticky" ,top:0, bgcolor:'white', boxShadow: "0px 4px 4px -4px rgba(0,0,0,0.3)"}}>
-              <Typography variant="h4" align="left" gutterBottom fontWeight='bold'>
+            <Container maxWidth={false} sx={{ position: "sticky" ,top:0, bgcolor:'white', boxShadow: "0px 4px 4px -4px rgba(0,0,0,0.3)"}}>
+              <Typography variant="h4" align="left" gutterBottom fontWeight='bold'sx={{pt:3}}>
                 {jobs.title}
               </Typography>
               <div style={{
@@ -45,7 +46,7 @@ export default function JobCard(props: JobDataProps) {
                 <Box component="img" src={jobs.companyphoto} sx={{
               height: 80,
               width: 80,
-              mt:1.5,
+              mt:0.5,
               mb:1.5,
               mr:1.5
             }}>
@@ -83,9 +84,16 @@ export default function JobCard(props: JobDataProps) {
               }}>
                   <StyleIcon />
                   <span>
-                    <Typography variant='h5' fontSize='1.3rem' align='left' sx={{ ml: 0.5, mt: 0.4}} fontWeight='500'>
-                      職缺類型
+                    <Typography variant='h5' fontSize='1.3rem' align='left' sx={{ ml: 0.5, mt: 0.4, mr: 0.5}} fontWeight='500'>
+                      職缺類型：
                     </Typography>
+                  </span>
+                  <span>
+                    <Stack direction="row" spacing={1}>
+                      {jobs.jobtag1 && <Chip label={jobs.jobtag1} />}
+                      {jobs.jobtag2 && <Chip label={jobs.jobtag2} />}
+                      {jobs.jobtag3 && <Chip label={jobs.jobtag3} />}
+                    </Stack>
                   </span>
               </div> 
               <div style={{
