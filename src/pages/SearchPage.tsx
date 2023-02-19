@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import JobList from '../components/searchpage/JobList';
 import JobDetails from '../components/searchpage/JobDetails';
 import Container from '@mui/material/Container';
@@ -19,17 +20,18 @@ export default function SearchPage() {
   let query_location = location.state.location;
   console.log(query_keywords, query_location)
   console.log(jobs)
+  const [selectedJob, SetSelectedJob] = useState(1)
 
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ flexGrow: 1}}>
         <SearchBar keywords={query_keywords} location={query_location} />
-        <Grid container spacing={0} >
-          <Grid item xs={6}>
-            <JobList job_list={JSON.stringify(jobs)}/>
+        <Grid container>
+          <Grid item xs={4}>
+            <JobList job_list={JSON.stringify(jobs)} SetSelectedJob={SetSelectedJob}/>
           </Grid>
-          <Grid item xs={6}>
-            <JobDetails job_data={JSON.stringify(jobs[0])}/>
+          <Grid item xs={8}>
+            <JobDetails job_data={JSON.stringify(jobs[selectedJob])}/>
           </Grid>
         </Grid>
       </Box>  

@@ -5,33 +5,46 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useLocation } from "react-router-dom";
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions } from '@mui/material';
 
 interface JobListProps {
   job_list: string;
+  SetSelectedJob(id: number): any
 }
 
 const theme = createTheme();
 
 export default function JobList(props: JobListProps) {
-  const { job_list } = props
+  const { job_list, SetSelectedJob } = props
 	const jobs = JSON.parse(job_list)
+  const handleJobClick = (id) => {
+    console.log(id)
+    SetSelectedJob(id)
+  }
   console.log(jobs)
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container 
+        component="main" 
+        maxWidth="sm"
+        sx={{ height: '75vh'}}>
         {jobs.map((data, id) => (
             <div>
-              <JobCard 
-                key={"search-job-" + id} 
-                job_data={JSON.stringify(data)}
-              />
+              <CardActionArea
+                onClick={() => handleJobClick(id)}
+              >
+                <JobCard 
+                  key={"search-job-" + id} 
+                  job_data={JSON.stringify(data)}
+                />
+              </CardActionArea>
               <Box  key={"job-padding-" + id}  sx={{ m: 1 }} />
             </div>
         ))}
-        {/* <Link href="/jobs/05" variant="body2">
-          {"to job page"}
-        </Link> */}
       </Container>
     </ThemeProvider>
   );

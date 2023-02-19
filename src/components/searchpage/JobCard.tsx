@@ -26,12 +26,14 @@ export default function JobCard(props: JobProps) {
 	const onSavedCLick = () => {
 		setSaved(!saved)
 	}
-	
+
 	console.log(jobData)
 	
   return (
 		<React.Fragment>
-			<Box sx={{ minWidth: 275, flexGrow: 1}}>
+			<Box 
+				sx={{ minWidth: 275, flexGrow: 1}}
+			>
 				<Card variant="outlined" sx={{ overflow: 'auto' }}>
 					<Box sx={{ 
 						display: 'flex', 
