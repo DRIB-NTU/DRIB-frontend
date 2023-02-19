@@ -35,43 +35,44 @@ export default function HomePage() {
           onSubmit={handleSubmit} 
           noValidate 
           sx={{
-            marginTop: 8,
+            marginTop: 11,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            marginBottom:20,
         }}>
-        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-          <SearchIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          What jobs are you looking for?
-        </Typography>
-        <TextField
-          margin="normal"
-          required
-          fullWidth
-          id="location"
-          label="Location"
-          name="location"
-          autoFocus
-        />
-        <TextField
-          margin="normal"
-          required
-          fullWidth
-          name="keywords"
-          label="Keywords"
-          id="keywords"
-        />
-        <Button
-          type="submit"
-          size="large"
-          variant="contained"
-          sx={{ mt: 3, mb: 2 }}
-        >
-          Search
-        </Button>
-      </Box>
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <SearchIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            找到最適合你的職缺
+          </Typography>
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            id="location"
+            label="工作地點"
+            name="location"
+            autoFocus
+          />
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            name="keywords"
+            label="關鍵字"
+            id="keywords"
+          />
+          <Button
+            type="submit"
+            size="large"
+            variant="contained"
+            sx={{ mt: 4, mb: 2 }}
+          >
+            搜尋
+          </Button>
+        </Box>
       </Container>
     </ThemeProvider>
   );
