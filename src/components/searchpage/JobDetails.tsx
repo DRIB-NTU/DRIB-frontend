@@ -23,7 +23,7 @@ export default function JobCard(props: JobDataProps) {
 		<React.Fragment>
 			<Box sx={{ 
         flexGrow: 1, 
-        height: '75vh',
+        height: '175vh',
         width: '95%',
       }}>
 				<Card variant="outlined" sx={{ 

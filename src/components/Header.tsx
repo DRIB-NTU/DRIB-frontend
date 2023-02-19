@@ -53,7 +53,6 @@ export default function Header(props: HeaderProps) {
           align:"left",
           flex:1,
           padding:"0px",
-          
         }}>
           <img src={require("../img/drib-low-resolution-color-logo.png")} alt="DRIB" height="70px"></img>
         </Box>
@@ -73,24 +72,6 @@ export default function Header(props: HeaderProps) {
           <input hidden accept="application/pdf" multiple type="file" />
         </Button>
         {login()}
-      </Toolbar>
-      <Toolbar
-        component="nav"
-        variant="dense"
-        sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
-      >
-        {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            {section.title}
-          </Link>
-        ))}
       </Toolbar>
     </React.Fragment>
   );

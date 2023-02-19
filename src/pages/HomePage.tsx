@@ -41,7 +41,7 @@ export default function HomePage() {
             alignItems: 'center',
             marginBottom:20,
         }}>
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
             <SearchIcon />
           </Avatar>
           <Typography component="h1" variant="h5">

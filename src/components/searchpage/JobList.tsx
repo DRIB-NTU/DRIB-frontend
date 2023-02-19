@@ -32,7 +32,7 @@ export default function JobList(props: JobListProps) {
         component="main" 
         maxWidth="sm"
         sx={{ 
-          height: '40%', 
+          height: '100%', 
           overflow: 'auto'
         }}>
         {jobs.map((data, id) => (
