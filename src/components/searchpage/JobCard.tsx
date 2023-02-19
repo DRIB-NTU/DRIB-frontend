@@ -41,8 +41,8 @@ export default function JobCard(props: JobProps) {
 						mb: -6, 
 					}}>
 						<IconButton color="primary" onClick={onSavedCLick}>
-							{saved? <BookmarkBorderRoundedIcon color="primary" />:
-								<BookmarkIcon color="primary" />
+							{saved? <BookmarkIcon color="primary" />:
+								<BookmarkBorderRoundedIcon color="primary" />
 							}
 						</IconButton>
 					</Box>

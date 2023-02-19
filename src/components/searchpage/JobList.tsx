@@ -31,9 +31,12 @@ export default function JobList(props: JobListProps) {
       <Container 
         component="main" 
         maxWidth="sm"
-        sx={{ height: '75vh'}}>
+        sx={{ 
+          height: '40%', 
+          overflow: 'auto'
+        }}>
         {jobs.map((data, id) => (
-            <div>
+            <div key={"search-div-" + id} >
               <CardActionArea
                 onClick={() => handleJobClick(id)}
               >
