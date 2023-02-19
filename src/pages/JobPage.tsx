@@ -4,6 +4,10 @@ import { Routes, Route, useParams } from 'react-router-dom';
 import JobCard from '../components/searchpage/JobCard'
 import Container from '@mui/material/Container';
 import {jobs} from '../params'
+import { Typography } from '@mui/material';
+import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
+
 
 const theme = createTheme();
 
@@ -11,12 +15,25 @@ const theme = createTheme();
 export default function JobPage() {
   let { jobid } = useParams()
   console.log(jobid)
-  console.log("hi")
   console.log(jobs)
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
-        job result page: {jobid}
+      <Container component="main" maxWidth="xl">
+        <Typography variant="h4" align="left" gutterBottom>
+          JOB TITLE
+        </Typography>
+        <Typography variant="h6" align="left" gutterBottom>
+          COMPANY
+        </Typography>
+        <Button
+          href = "https://www.104.com.tw/job/7ftzg?jobsource=jolist_c_relevance"
+          size="small"
+          // variant="contained"
+          sx={{ mt: 0, mb: 1 }}
+          >
+            APPLY NOW
+        </Button>
+          
       </Container>
     </ThemeProvider>
   );

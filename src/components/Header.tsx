@@ -38,7 +38,7 @@ export default function Header(props: HeaderProps) {
           Sign up
         </Button>
       </Toolbar>
-      <Toolbar
+      {/* <Toolbar
         component="nav"
         variant="dense"
         sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
@@ -55,7 +55,7 @@ export default function Header(props: HeaderProps) {
             {section.title}
           </Link>
         ))}
-      </Toolbar>
+      </Toolbar> */}
     </React.Fragment>
   );
 }
