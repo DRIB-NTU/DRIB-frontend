@@ -62,22 +62,22 @@ const jobs = [
         "benefits": "除了團保、健檢、員工旅遊補助外\n我們提供熱情的工作夥伴 \n我們提供愉快的工作環境 \n我們提供還不錯的休假制度(不扣薪病假、生日假、流感假、新人10天年假、三不五時亂放假、老闆高興突然說放假)"
     },
     {   
-        "jobid": "0",
-        "title": "業務部實習生",
-        "company": "BBDO Taiwan_香港商黃禾國際廣告有限公司台灣分公司",
-        "companyphoto": "https://sixland.mx/wp-content/uploads/2022/12/22.png",
-        "location": "台北市信義區松仁路97號16樓",
-        "salary": "論件計酬3,000~8,000元",
+        "jobid": "4",
+        "title": "行銷企劃實習生 Marketing Intern（台南/Tainan）",
+        "company": "凱鈿行動科技股份有限公司",
+        "companyphoto": "data:image/png;base64,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",
+        "location": "台南市 永康區 中華路1-4號5樓C室",
+        "salary": "時薪 180元",
         "link": "https://www.104.com.tw/job/7ftzg?jobsource=jolist_c_relevance",
         "jobtag1": "工讀生",
-        "jobtag2": "行銷企劃助理",
-        "jobtag3": "",
-        "description": "1. 知名品牌行銷操作實習 \n2. 數據整合、資料分析、社群發想、行銷活動觀摩 \n3. 希望一周最少有3天 (請告知可以實習的時間) \n4. 英文寫作能力好 \n",
+        "jobtag2": "行銷企劃人員",
+        "jobtag3": "廣告文案企劃人員",
+        "description": "工作內容\n【你需要做什麼？】\n\n• 行銷內容撰寫、編輯與翻譯 \n • 部落格與網頁等內容發佈，內容管理系統維護 \n • 協助行銷活動推廣，及素材發想與製作 \n\n• 協助專案人員進行市場調查和資料收集 \n\n• 行政庶務協助 \n\n必要條件\n【你需要具備什麼？】\n\n• 良好的中英文文案力(請檢附英文履歷或相關英文能力證明，若有作品集請提供) \n\n• 具團隊合作及獨立作業能力 \n• 蒐集彙整英文資料能力  \n• 熟悉設計工具（如Canva、iMovie等），能進行簡單的圖文編排和影音素材處理 \n• iOS及Android APP軟體使用習慣\n\n 加分條件 【加分條件】 \n• APP相關產業、行銷、SEO或內容編輯領域實習經驗  \n• 具平面或動畫繪圖創作經驗（請附上作品集） \n\n心動不如馬上行動，想加入我們，就快把履歷投遞過來吧！\n履歷餵食處▼（HR小編只食用經由這個連結餵過來的履歷喔＞＜）\nhttps://KdanMobile.teamdoor.io/s/XKlui7QK",
         "requirements": "",
         "benefits": "▌年度休假享有優於法律的年假、不扣薪病假、生日假和特殊假期（Dcard 日等），休息是為了走更長遠的路。\n▌工作環境自由明亮的工作空間，舒適的工作配備，寬敞的辦公室，甚至還有床協助夥伴補充體力。\n▌彈性氛圍彈性的 Remote Work，夥伴可以自主安排工作的時間與地點，更多的彈性，創造不同的可能性！▌團隊保險全面性團體保險及完整健康檢查，每一項都為了更體貼夥伴的健康需求。\n▌團隊慶祝節慶派對、午餐日、尾牙、每週夥伴分享等團隊活動，我們重視每個相聚的機會！▌有趣活動水果日 、手搖杯日、個人按摩、各類運動課程、專屬的 Dcard Buddy Program 等，和夥伴一起享受 Dcard 生活！"
     },
     {   
-        "jobid": "0",
+        "jobid": "5",
         "title": "業務部實習生",
         "company": "BBDO Taiwan_香港商黃禾國際廣告有限公司台灣分公司",
         "companyphoto": "https://sixland.mx/wp-content/uploads/2022/12/22.png",
@@ -92,7 +92,7 @@ const jobs = [
         "benefits": "除了團保、健檢、員工旅遊補助外\n我們提供熱情的工作夥伴 \n我們提供愉快的工作環境 \n我們提供還不錯的休假制度(不扣薪病假、生日假、流感假、新人10天年假、三不五時亂放假、老闆高興突然說放假)"
     },
     {   
-        "jobid": "0",
+        "jobid": "6",
         "title": "業務部實習生",
         "company": "BBDO Taiwan_香港商黃禾國際廣告有限公司台灣分公司",
         "companyphoto": "https://sixland.mx/wp-content/uploads/2022/12/22.png",
@@ -107,7 +107,7 @@ const jobs = [
         "benefits": "除了團保、健檢、員工旅遊補助外\n我們提供熱情的工作夥伴 \n我們提供愉快的工作環境 \n我們提供還不錯的休假制度(不扣薪病假、生日假、流感假、新人10天年假、三不五時亂放假、老闆高興突然說放假)"
     },
     {   
-        "jobid": "0",
+        "jobid": "7",
         "title": "業務部實習生",
         "company": "BBDO Taiwan_香港商黃禾國際廣告有限公司台灣分公司",
         "companyphoto": "https://sixland.mx/wp-content/uploads/2022/12/22.png",
