@@ -21,10 +21,9 @@ export default function JobList(props: JobListProps) {
   const { job_list, SetSelectedJob } = props
 	const jobs = JSON.parse(job_list)
   const handleJobClick = (id) => {
-    console.log(id)
     SetSelectedJob(id)
   }
-  console.log(jobs)
+  // console.log(jobs)
 
   return (
     <ThemeProvider theme={theme}>

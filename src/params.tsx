@@ -1,6 +1,6 @@
 const contact = "0800-000-000"
 
-const jobs = [
+const params_jobs = [
     {   
         "jobid": "0",
         "title": "業務部實習生",
@@ -123,5 +123,7 @@ const jobs = [
     }
 ]
 
-export {contact, jobs}
+const useBackend = false
+
+export {contact, params_jobs, useBackend}
 

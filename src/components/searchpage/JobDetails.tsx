@@ -17,6 +17,7 @@ interface JobDataProps {
     
 export default function JobCard(props: JobDataProps) {
 	const { job_data } = props
+  // console.log(job_data)
 	const jobs = JSON.parse(job_data)
 	// console.log(jobData)
 	
@@ -62,7 +63,7 @@ export default function JobCard(props: JobDataProps) {
               
               </div>
               <Button
-                  href = {jobs.link.toString()}
+                  href = {jobs.link? jobs.link.toString(): ""}
                   target="_blank"
                   size="small"
                   variant="contained"
