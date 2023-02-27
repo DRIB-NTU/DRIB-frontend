@@ -6,19 +6,38 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import ManageSearchRoundedIcon from '@mui/icons-material/ManageSearchRounded';
 import TextField from '@mui/material/TextField';
+import instance from '../../axios';
+import {params_jobs, useBackend} from '../../params';
 
 const theme = createTheme();
 
 interface QueryProps {
   keywords: string
   location: string
+  setJobs(jobs: any): any
 }
     
 export default function JobCard(props: QueryProps) {
-	// const { keywords, location } = props
+	const { setJobs } = props
   const [keywords, setKeywords] = useState("行銷實習生")
   const [location, setLocation] = useState("台北市")
 	// console.log(keywords, location)
+
+  const handleOnClick = () => {
+    const getJobs = async () => {
+      console.log(keywords, location)
+      const res = await instance.get('/api/search', {
+        params: { 'keywords': keywords, 'location': location },
+      });
+      if (res.status === 200) {
+        console.log(res.data.jobs)
+        setJobs(res.data.jobs)
+      } else {
+        console.log('error', res.data);
+      }
+    };
+    if(useBackend) getJobs();
+  }
 
   return (
 		<React.Fragment>
@@ -37,6 +56,7 @@ export default function JobCard(props: QueryProps) {
             name="keywords"
             label="Keywords"
             id="keywords"
+            onChange={(newValue) => setKeywords(newValue.target.value)}
             value={keywords}
             sx={{width: 300}}
           />
@@ -46,6 +66,7 @@ export default function JobCard(props: QueryProps) {
             label="Location"
             name="location"
             value={location}
+            onChange={(newValue) => setLocation(newValue.target.value)}
             sx={{width: 300, ml:3}}
           />
           <Box sx={{
@@ -59,6 +80,7 @@ export default function JobCard(props: QueryProps) {
               sx={{
                 fontWeight: 550,
               }}
+              onClick={handleOnClick}
             >
               搜尋
             </Button>
