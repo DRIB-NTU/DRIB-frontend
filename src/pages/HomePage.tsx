@@ -33,7 +33,7 @@ export default function HomePage() {
         <Box 
           component="form" 
           onSubmit={handleSubmit} 
-          noValidate 
+          noValidate
           sx={{
             marginTop: 11,
             display: 'flex',

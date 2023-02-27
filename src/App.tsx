@@ -2,7 +2,6 @@ import './index.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import JobPage from './pages/JobPage';
 import SearchPage from './pages/SearchPage';
 import {
   createBrowserRouter,
@@ -18,10 +17,6 @@ const router = createBrowserRouter([
   {
     path: "/search",
     element: <SearchPage />,
-  },
-  {
-    path: "/jobs/:jobid",
-    element: <JobPage />,
   },
   {
     path: "about",
