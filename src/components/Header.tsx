@@ -36,14 +36,13 @@ export default function Header(props: HeaderProps) {
     if (!file) {
       return;
     }
-
     // 👇 Uploading the file using the fetch API to the server
-    fetch('https://httpbin.org/post', {
+    fetch('http://localhost:3000/api/uploadfile', {
       method: 'POST',
       body: file,
       // 👇 Set headers manually for single file upload
       headers: {
-        'content-type': file.type,
+        "content-type": file.type,
         'content-length': `${file.size}`, // 👈 Headers need to be a string
       },
     })
