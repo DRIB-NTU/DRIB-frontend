@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import {useNavigate} from 'react-router';
 import SendIcon from '@mui/icons-material/Send';
+import axios from 'axios';
 
 interface HeaderProps {
   sections: ReadonlyArray<{
@@ -36,19 +37,15 @@ export default function Header(props: HeaderProps) {
     if (!file) {
       return;
     }
+    const formData = new FormData()
+    formData.append("file", file)
+    console.log(file.type, file.size)
     // 👇 Uploading the file using the fetch API to the server
-    fetch('http://localhost:3000/api/uploadfile', {
-      method: 'POST',
-      body: file,
-      // 👇 Set headers manually for single file upload
+    axios.post("http://127.0.0.1:5000/api/getresume", formData, {
       headers: {
-        "content-type": file.type,
-        'content-length': `${file.size}`, // 👈 Headers need to be a string
+        "content-type": "multipart/form-data",
       },
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.error(err));
+    });
   };
   const [file, setFile] = useState<File>();
   const hideupload=()=>{
